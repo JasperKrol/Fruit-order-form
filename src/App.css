@@ -2,3 +2,21 @@ img {
     height: 100px;
     width: 300px;
 }
+
+.form-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+
+    justify-content: space-around;
+}
+
+.fruit-content {
+    justify-content: center;
+}
+
+form   {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-around;
+}
