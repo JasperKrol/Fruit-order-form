@@ -3,7 +3,9 @@ function FruitTile(props) {
 // console.log("fruittileprops", props)
 
     function changeAmount (number) {
-    props.setAardbeiCounter(props.aardbeiCounter + number)
+    props.setAardbeiCounter(props.aardbeiCounter + number);
+
+
     }
 
     return (
