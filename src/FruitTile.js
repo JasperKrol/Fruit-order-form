@@ -1,21 +1,53 @@
+import FruitSelection from "./FruitSelection";
+import React from 'react';
+import './App.css';
 
-function FruitTile(props) {
+
+import {useState} from "react"
+import ResetButton from "./ResetButton";
+
+
+function FruitTile() {
 // console.log("fruittileprops", props)
 
-    function changeAmount (number) {
-    props.setCounter(props.counter + number);
+    const [aardbeiCounter, setAardbeiCounter] = useState(0)
+    const [banaanCounter, setBanaanCounter] = useState(0)
+    const [appelCounter, setAppelCounter] = useState(0)
+    const [kiwiCounter, setKiwiCounter] = useState(0)
 
-    }
 
     return (
-        <fieldset>
-            <h1>{props.fruitType}</h1>
-            <button onClick={(() => changeAmount(1))}>+</button>
-            <span>
-                {props.counter}
-            </span>
-            <button onClick={(() => changeAmount(-1))}>-</button>
-        </fieldset>
+        <>
+            <FruitSelection
+                fruitType="Aardbeien"
+                counter={aardbeiCounter}
+                setCounter={setAardbeiCounter}
+            />
+            <FruitSelection
+                fruitType="Bananen"
+                counter={banaanCounter}
+                setCounter={setBanaanCounter}
+            />
+
+            <FruitSelection
+                fruitType="Appels"
+                counter={appelCounter}
+                setCounter={setAppelCounter}
+            />
+
+            <FruitSelection
+                fruitType="Kiwi"
+                counter={kiwiCounter}
+                setCounter={setKiwiCounter}
+            />
+
+            <ResetButton
+                setAardbeiCounter={setAardbeiCounter}
+                setBanaanCounter={setBanaanCounter}
+                setKiwiCounter={setKiwiCounter}
+                setAppelCounter={setAppelCounter}
+            />
+        </>
     )
 }
 
