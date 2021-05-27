@@ -3,8 +3,7 @@ function FruitTile(props) {
 // console.log("fruittileprops", props)
 
     function changeAmount (number) {
-    props.setAardbeiCounter(props.aardbeiCounter + number);
-
+    props.setCounter(props.counter + number);
 
     }
 
@@ -12,7 +11,9 @@ function FruitTile(props) {
         <fieldset>
             <h1>{props.fruitType}</h1>
             <button onClick={(() => changeAmount(1))}>+</button>
-            {props.aardbeiCounter}
+            <span>
+                {props.counter}
+            </span>
             <button onClick={(() => changeAmount(-1))}>-</button>
         </fieldset>
     )
