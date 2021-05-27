@@ -1,14 +1,11 @@
 import FruitSelection from "./FruitSelection";
 import React from 'react';
 import './App.css';
-
-
 import {useState} from "react"
 import ResetButton from "./ResetButton";
 
 
 function FruitTile() {
-// console.log("fruittileprops", props)
 
     const [aardbeiCounter, setAardbeiCounter] = useState(0)
     const [banaanCounter, setBanaanCounter] = useState(0)

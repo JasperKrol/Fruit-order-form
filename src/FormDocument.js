@@ -16,7 +16,8 @@ function FormDocument () {
     }
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <label htmlFor="first-name">Naam:
+            <div className="personal" >
+            <label  htmlFor="first-name">Naam:
                 <input
                     type="text"
                     id="first-name"
@@ -62,15 +63,27 @@ function FormDocument () {
                 />
                 {errors.postcode && <p>{errors.postcode.message}</p>}
             </label>
-            <label htmlFor="Bezorgfrequentie">Bezorgfrequentie
+            </div>
+
+            <br />
+
+            <label htmlFor="Bezorgfrequentie">Bezorgfrequentie:
+                <br />
+                <ul>
+                    <li>
                 <input {...register("Bezorgfrequentie", {required: true})} type="radio"
-                       value="iedere week"/>iedere week
+                       value="iedere week"/>iedere week</li>
+                    <li>
                 <input {...register("Bezorgfrequentie", {required: true})} type="radio"
-                       value="om de week "/>om de week
+                       value="om de week "/>om de week</li>
+                    <li>
                 <input {...register("Bezorgfrequentie", {required: true})} type="radio"
-                       value="iedere maand"/>iedere maand
+                       value="iedere maand"/>iedere maand</li>
+                    <li>
                 <input {...register("Bezorgfrequentie", {required: true})} type="radio"
-                       value="anders"/>anders
+                       value="anders"/>anders</li>
+
+                </ul>
             </label>
             {selectedReferrer === 'anders' && (
                 <input
@@ -78,8 +91,10 @@ function FormDocument () {
                     {...register("Bezorgfrequentie-anders", {required: true})}/>
             )}
 
+            <br />
 
-            <label htmlFor="comments">Opmerkingen
+            <label htmlFor="comments">Opmerkingen:
+                <br />
                 <textarea name="comments" id="comments" cols="30" rows="10"
                           {...register("comments")}
                 >

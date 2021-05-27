@@ -3,7 +3,6 @@ import './App.css';
 
 
 function FruitSelection(props) {
-// console.log("fruittileprops", props)
 
     function changeAmount (number) {
         props.setCounter(props.counter + number);

@@ -1,5 +1,5 @@
 function ResetButton (props) {
-console.log("resetbuttonprops",props)
+
 
     function resetCounter () {
         props.setAardbeiCounter(0)

@@ -1,6 +1,13 @@
 img {
-    height: 100px;
-    width: 300px;
+    height: 200px;
+    width: 500px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .form-wrapper {
@@ -18,5 +25,19 @@ form   {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.personal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.personal label {
+    justify-content: flex-end;
+}
+
+ul {
+    list-style: none;
 }
