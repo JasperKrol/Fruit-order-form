@@ -58,8 +58,11 @@ function FormDocument () {
                     id="postal-code"
                     name="postcode"
                     {...register("postcode", {
-                        required: {value: true, message: "dit veld is verplicht"}
-                    })}
+                        required: { value: true, message: "Dit veld is verplicht" },
+                        pattern: {
+                            value: /^[1-9][0-9]{3}?(?!sa|sd|ss)[a-z]{2}$/im,
+                            message: "niet geldige postcode",
+                        }})}
                 />
                 {errors.postcode && <p>{errors.postcode.message}</p>}
             </label>
